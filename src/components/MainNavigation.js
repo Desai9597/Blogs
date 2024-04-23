@@ -11,7 +11,7 @@ function MainNavigation() {
         <ul>
           <li>
             <NavLink
-              to="/Blogs"
+              to="/Blogs/"
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }

@@ -14,7 +14,7 @@ const PostPage = lazy(() => import('./pages/Post'));
 
 const router = createBrowserRouter([
   {
-    path: '/Blogs',
+    path: '/Blogs/',
     element: <RootLayout />,
     children: [
       {
