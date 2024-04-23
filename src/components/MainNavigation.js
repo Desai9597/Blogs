@@ -6,12 +6,12 @@ import classes from './MainNavigation.module.css';
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <img src={logo} slt="Blogs" />
+      <img src={logo} alt="Blogs" />
       <nav>
         <ul>
           <li>
             <NavLink
-              to="/"
+              to="/Blogs"
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
@@ -22,12 +22,12 @@ function MainNavigation() {
           </li>
           <li>
             <NavLink
-              to="/posts"
+              to="/Blogs/posts"
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
             >
-              Blog
+              Blogs
             </NavLink>
           </li>
         </ul>

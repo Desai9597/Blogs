@@ -14,7 +14,7 @@ const PostPage = lazy(() => import('./pages/Post'));
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Blogs',
     element: <RootLayout />,
     children: [
       {
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'posts',
+        path: '/Blogs/posts',
         children: [
           /*{  index: true, element: <BlogPage />, loader: postsLoader }*/
           //async import statement returns back a promise.
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
           //to wait for the content to be loading before actually rendering
           {  
             index: true, 
-            element: <Suspense fallback={<p>Loaing..</p>}><BlogPage /></Suspense>, 
+            element: <Suspense fallback={<p>Loading..</p>}><BlogPage /></Suspense>, 
             loader: () => 
               import('./pages/Blog').then(module => module.loader()) 
           },
